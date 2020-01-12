@@ -1,0 +1,6 @@
+{
+    "variables": {},
+    "builders": [{}],
+    "post-processors": [{}],
+    "provisioners": [{}]
+}
