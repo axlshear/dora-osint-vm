@@ -38,8 +38,8 @@
                 [ "modifyvm", "{{.Name}}", "--memory", "4096" ],
                 [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
             ],
-            "ssh_username": "vagrant",
-            "ssh_password": "vagrant",
+            "ssh_username": "osint",
+            "ssh_password": "ints0",
             "ssh_port": 22,
             "ssh_wait_timeout": "10000s"
         }
