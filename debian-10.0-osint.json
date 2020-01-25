@@ -33,7 +33,7 @@
             "vm_name": "packer-debian-10-osint",
             "http_directory": "http",
             "headless": true,
-            "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
+            "shutdown_command": "echo 'ints0'|sudo -S shutdown -P now",
             "vboxmanage": [
                 [ "modifyvm", "{{.Name}}", "--memory", "4096" ],
                 [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
@@ -44,6 +44,21 @@
             "ssh_wait_timeout": "10000s"
         }
     ],
-    "post-processors": [{}],
-    "provisioners": [{}]
+    "provisioners": [
+        {
+            "type": "shell",
+            "execute_command": "echo 'ints0' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+            "script": "scripts/system-setup.sh"
+        },
+        {
+            "type": "shell",
+            "execute_command": "echo 'ints0' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+            "script": "scripts/vboxguestadd.sh"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/user-setup.sh"
+        }
+    ],
+    "post-processors": [{}]
 }
