@@ -60,5 +60,10 @@
             "script": "scripts/user-setup.sh"
         }
     ],
-    "post-processors": [{}]
+    "post-processors": [
+        {
+            "type": "vagrant",
+            "output": "osint-debian-{{user `debian_version`}}-amd64_{{.Provider}}.box"
+        }
+    ]
 }
