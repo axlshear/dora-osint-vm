@@ -41,7 +41,7 @@
             "ssh_username": "osint",
             "ssh_password": "ints0",
             "ssh_port": 22,
-            "ssh_wait_timeout": "60m"
+            "ssh_wait_timeout": "10000s"
         }
     ],
     "provisioners": [
