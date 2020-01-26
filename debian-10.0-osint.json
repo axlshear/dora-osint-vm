@@ -47,12 +47,12 @@
     "provisioners": [
         {
             "type": "shell",
-            "execute_command": "echo 'ints0' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+            "execute_command": "echo 'tnis0' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
             "script": "scripts/system-setup.sh"
         },
         {
             "type": "shell",
-            "execute_command": "echo 'ints0' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+            "execute_command": "echo 'tnis0' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
             "script": "scripts/vboxguestadd.sh"
         },
         {
