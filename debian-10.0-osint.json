@@ -39,7 +39,7 @@
                 [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
             ],
             "ssh_username": "osint",
-            "ssh_password": "ints0",
+            "ssh_password": "tnis0",
             "ssh_port": 22,
             "ssh_wait_timeout": "10000s"
         }
