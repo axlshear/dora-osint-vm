@@ -6,7 +6,7 @@ mkdir -p $HOME/Downloads/Programs
 
 # Install PIP software
 # python 2
-pip install --user --upgrade youtube_dl (press Y)
+pip install --user --upgrade youtube_dl
 pip install --user Instalooter
 # python 3
 pip3 install --user Instaloader
