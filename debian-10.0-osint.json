@@ -33,7 +33,7 @@
             "vm_name": "packer-debian-10-osint",
             "http_directory": "http",
             "headless": false,
-            "shutdown_command": "echo 'ints0'|sudo -S shutdown -P now",
+            "shutdown_command": "echo 'tnis0'|sudo -S shutdown -P now",
             "vboxmanage": [
                 [ "modifyvm", "{{.Name}}", "--memory", "4096" ],
                 [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
