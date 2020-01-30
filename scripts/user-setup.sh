@@ -5,12 +5,13 @@ mkdir $HOME/go
 mkdir -p $HOME/Downloads/Programs
 
 # Install PIP software
+# installing all pip software system-wide due to Eyewitness requirement to install as root
 # python 2
-pip install --user --upgrade youtube_dl
-pip install --user Instalooter
+echo 'tnis0'|sudo -S pip install --upgrade youtube_dl
+echo 'tnis0'|sudo -S pip install Instalooter
 # python 3
-pip3 install --user Instaloader
-pip3 install --user twint
+echo 'tnis0'|sudo -S pip3 install Instaloader
+echo 'tnis0'|sudo -S pip3 install twint
 
 
 # Install from source
@@ -18,7 +19,6 @@ pip3 install --user twint
 cd ~/Downloads/Programs
 git clone https://github.com/ChrisTruncer/EyeWitness.git
 cd EyeWitness/setup
-# requires sudo need to understand why
 echo 'tnis0'|sudo -S ./setup.sh
 
 # Amass
@@ -32,20 +32,20 @@ go get -v -u github.com/OWASP/Amass/v3/...
 # Sublist3r
 cd ~/Downloads/Programs
 git clone https://github.com/aboul3la/Sublist3r.git
-# may need sudo
-cd Sublist3r && pip install --user -r requirements.txt
+cd Sublist3r
+echo 'tnis0'|sudo -S pip install -r requirements.txt
 
 # Photon
 cd ~/Downloads/Programs
 git clone https://github.com/s0md3v/Photon.git
-# may need sudo
-cd Photon && pip3 install --user -r requirements.txt
+cd Photon
+echo 'tnis0'|sudo -S pip3 install -r requirements.txt
 
 # theHarvester
 cd ~/Downloads/Programs
 git clone https://github.com/laramies/theHarvester.git
 # need to understand why we are checking out a branch
-cd theHarvester && git checkout 8b88a66
-# may need sudo
-pip3 install --user -r requirements.txt
+cd theHarvester
+git checkout 8b88a66
+echo 'tnis0'|sudo -S pip3 install -r requirements.txt
 
