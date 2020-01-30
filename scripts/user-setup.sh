@@ -18,12 +18,15 @@ pip3 install --user twint
 cd ~/Downloads/Programs
 git clone https://github.com/ChrisTruncer/EyeWitness.git
 cd EyeWitness/setup
-# may need sudo
-./setup.sh
+# requires sudo need to understand why
+echo 'tnis0'|sudo -S ./setup.sh
 
 # Amass
 cd ~/Downloads/Programs
 export GO111MODULE=on
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 go get -v -u github.com/OWASP/Amass/v3/...
 
 # Sublist3r
