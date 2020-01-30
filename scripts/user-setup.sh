@@ -2,7 +2,7 @@
 
 # Make some directories
 mkdir $HOME/go
-mkdir $HOME/Downloads/Programs
+mkdir -p $HOME/Downloads/Programs
 
 # Install PIP software
 # python 2
