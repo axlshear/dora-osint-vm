@@ -2,7 +2,7 @@
 apt-get update
 
 # add user to sudo group
-usermod -a -G sudo osint
+#usermod -a -G sudo osint
 
 # install golang
 wget https://dl.google.com/go/go1.13.6.linux-amd64.tar.gz
