@@ -38,7 +38,15 @@
             "shutdown_command": "echo 'tnis0'|sudo -S shutdown -P now",
             "vboxmanage": [
                 [ "modifyvm", "{{.Name}}", "--memory", "4096" ],
-                [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
+                [ "modifyvm", "{{.Name}}", "--cpus", "1" ],
+                [ "modifyvm", "{{.Name}}", "--vram", "64" ],
+                [ "modifyvm", "{{.Name}}", "--graphicscontroller", "vmsvga" ],
+                [ "modifyvm", "{{.Name}}", "--vrde", "off" ],
+                [ "modifyvm", "{{.Name}}", "--clipboard-mode", "bidirectional" ],
+                [ "modifyvm", "{{.Name}}", "--draganddrop", "bidirectional" ],
+                [ "modifyvm", "{{.Name}}", "--audio", "pulse" ],
+                [ "modifyvm", "{{.Name}}", "--audiocontroller", "ac97" ],
+                [ "modifyvm", "{{.Name}}", "--audioout", "on" ]
             ],
             "ssh_username": "osint",
             "ssh_password": "tnis0",
@@ -60,12 +68,6 @@
         {
             "type": "shell",
             "script": "scripts/user-setup.sh"
-        }
-    ],
-    "post-processors": [
-        {
-            "type": "vagrant",
-            "output": "osint-debian-{{user `debian_version`}}-amd64_{{.Provider}}.box"
         }
     ]
 }
