@@ -31,11 +31,15 @@ or Mac hosts.
 ## Building VM
 
 ```
-packer build debian-10.2.0-osint.json
+packer build debian-osint.json
 ```
 
 This can take a while depending on your hardware and network speed and will
 create a *vmdk* and *ovf* file in a folder called *output-virtualbox-iso*
+
+If you have built a previous version or are tweaking the configuration for a new
+build you will have to remove the *output-virtualbox-iso* folder before running
+packer build.
 
 ## Importing into VirtualBox
 
@@ -49,7 +53,7 @@ create a *vmdk* and *ovf* file in a folder called *output-virtualbox-iso*
 
 ## VM Configuration
 
-* OS: Debian 10.2.0 64-bit
+* OS: Debian 10.3.0 64-bit
 * Memory: 4GB
 * HD Size: 32GB
 * Video Memory: 64MB
@@ -97,3 +101,7 @@ Provisioning scripts are used to install the following software
 * [Photon](https://github.com/s0md3v/Photon)
 * [theHarvester](https://github.com/laramies/theHarvester)
 
+#### User bashrc
+
+A modified bashrc file is included which provides environment variables for
+golang and updates the $PATH
